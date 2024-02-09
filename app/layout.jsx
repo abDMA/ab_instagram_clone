@@ -1,4 +1,5 @@
 import '@/styles/globals.css'
+import 'normalize.css'; // Note this
 import firebaseConfig from './firebase'
 import { RecoilProvider } from '@/components/constant'
 import { AuthProvider } from '@/components/constant'
