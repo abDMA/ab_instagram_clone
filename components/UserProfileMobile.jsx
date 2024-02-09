@@ -18,7 +18,7 @@ const UserProfileMobile = () => {
            </h1>
         <Link href='settings'><FaUserCog className='text-[20px]' /></Link>
         </div>
-        <div className='flex items-center gap-6'>
+        <div className='flex items-center gap-6 justify-between'>
         <img src={profileImg[0] ? profileImg[0] : photoUrl} alt="Photo profile" className='w-[70px] h-[70px] object-cover rounded-full '/>
         <div className='flex flex-[0.8] items-center gap-4'>
         <p className='flex items-center flex-col  text-center font-normal text-[14px] leading-[1.1]'>

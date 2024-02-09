@@ -6,6 +6,7 @@ import { useSession } from "next-auth/react"
 import { collection, onSnapshot, orderBy, query } from "firebase/firestore"
 import { EmailState, NameState, ProfilState, UserName, userUid } from "./RecoilState"
 import { useRecoilState } from "recoil"
+import any from "../public/any.png"
 
 const Posts = () => {
   const {data:session} = useSession()
@@ -36,7 +37,7 @@ const Posts = () => {
     <div className=' w-[99%] flex flex-col gap-5  py-4 rounded-md mt-7 '>
       {
         posts.map((post)=>(
-          <Post key={post.id} id={post.id} username={userName[0]} profileImg={profileImg[0]} caption={post?.data()?.Caption} postImg={post?.data()?.PostImage} />
+          <Post key={post.id} id={post.id} username={userName[0]} profileImg={profileImg[0]} caption={post?.data()?.Caption} postImg={(post?.data()?.PostImage)?(post?.data()?.PostImage):any} />
         ))
       }
 

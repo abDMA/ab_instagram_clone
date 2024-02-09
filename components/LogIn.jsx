@@ -85,17 +85,42 @@ const LogIn =  () => {
       const user = await signInWithEmailAndPassword(auth,email,pass).then((userCredential) => {
         const user = userCredential.user;
         setUserUid(user.uid);
-        setIsUserLoading(false);
+        setIsUserLoading(true);
         setIsLoggedIn(true);
         setVerfiyAcount(user.emailVerified);
         router.replace('/');
         }).catch((error)=>{
         const errorCode = error.code;
+        console.log(errorCode)
         const errorMessage = error.message;
-        if (errorCode.includes('auth/invalid-login-credentials')) {
+        if (errorCode.includes('auth/invalid-credential')) {
+            toast.warn('Invalid email or password enter correct your information and try again', {
+              position: "top-right",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "light",
+              });
         setFirebaseErr(true);
         setIsUserLoading(false);
-      }else{
+      }else if(errorCode.includes('auth/invalid-email')){
+        toast.warn('Invalid email enter correct email and try again', {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          });
+          setFirebaseErr(true);
+          setIsUserLoading(false);
+      }
+      else{
         setFirebaseErr(false);
       };
    

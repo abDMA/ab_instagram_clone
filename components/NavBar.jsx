@@ -18,6 +18,7 @@ import { signOut } from 'firebase/auth'
 import { auth, db, storage } from '@/app/firebase'
 import { addDoc, arrayUnion, collection, doc, serverTimestamp, setDoc, updateDoc } from 'firebase/firestore'
 import { getDownloadURL, ref, uploadString } from 'firebase/storage'
+import any from "../public/any.png"
 
 
 
@@ -36,7 +37,7 @@ const  NavBar = ( {}) => {
   const [selectedFile, setSelectedFile] = useState(null) 
   const [loading, setLoading] = useState(false)
   const [caption, setCaption] = useState('')
-  const photoUrl = 'https://www.refugee-action.org.uk/wp-content/uploads/2016/10/anonymous-user.png'
+  
   
   
   const menuHandlerOp = () =>{
@@ -192,7 +193,7 @@ const  NavBar = ( {}) => {
           
           <details className="relative dropdown dropdown-end">
              <summary className=" relative  btn bg-transparent  border-none"> 
-             <img src={profileImg[0] ? profileImg[0] : photoUrl } alt="profile" className='w-8 h-8 rounded-full object-cover' />
+             <img src={profileImg[0] ? profileImg[0] : any } alt="profile" className='w-8 h-8 rounded-full object-cover' />
              </summary>
              <ul className="mt-1 flex flex-col overflow-hidden p-2 shadow menu dropdown-content z-[10] bg-base-100  rounded-box w-52">
               <Link href='/profile' className='px-4 py-2 flex items-center gap-2 hover:bg-[#f5f4f4b0] duration-150 cursor-pointer rounded-lg'>

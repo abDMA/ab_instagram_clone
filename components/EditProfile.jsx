@@ -11,6 +11,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useRouter } from 'next/navigation';
 import { signOut as signOUT } from 'next-auth/react';
+import any from "../public/any.png"
 
 
 const EditProfile = ({props}) => {
@@ -28,10 +29,9 @@ const EditProfile = ({props}) => {
    const [emailVerificationHasSent, seteEmailVerificationHasSent] = useState('');
    const verfiyAcount = useRecoilState(verifiedChecking);
    const [name, setName] = useState(RuserName[0]);
-   const photoURL='https://www.refugee-action.org.uk/wp-content/uploads/2016/10/anonymous-user.png';
    const [email, setEmail] = useState( userEmail[0]);
    const [userName, setUserName] = useState(UUserName[0]);
-   const [profilemg, setProfileImg] = useState(profileImg[0]? profileImg[0] : photoURL );
+   const [profilemg, setProfileImg] = useState(profileImg[0]? profileImg[0] : any );
    const [description, setDescription] = useState(dEscription[0]);
    const [gender, setGender] = useState(GenDer[0]);
    const [Errors, setErrors] = useState('');

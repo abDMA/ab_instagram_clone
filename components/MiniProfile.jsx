@@ -11,13 +11,13 @@ import { signOut as signOUT } from 'next-auth/react'
 import {MiniProfilLoading} from '@/components/constant'
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
+import any from "../public/any.png"
 const MiniProfile = () => {
   const {data:session} = useSession()
   const [results, setResults] = useState([])
   const userName = useRecoilState(UserName);
   const profileImg = useRecoilState(ProfilState)
   const userEmail = useRecoilState(EmailState)
-  const photoUrl = 'https://www.refugee-action.org.uk/wp-content/uploads/2016/10/anonymous-user.png'
   const [isLoggedIn, setIsLoggedIn] = useRecoilState(isUserLogedIn)
   const [loading, setLoading] = useState(false)
  
@@ -49,7 +49,7 @@ setLoading(true)
     loading ? <MiniProfilLoading/> :
     <div className="lg:w-[260px] w-[250px] flex items-start flex-col "> 
         {(userName[0] && userEmail[0] ) ? <div className='flex items-center gap-5 mt-6'>
-          <img src={profileImg[0] ? profileImg[0] : photoUrl} alt="" className='lg:w-[45px] h-[39px] w-[55px] object-cover rounded-full' />
+          <img src={profileImg[0] ? profileImg[0] : any} alt="" className='lg:w-[45px] h-[39px] w-[55px] object-cover rounded-full' />
           <div>
           <h1 className='font-bold text-[15px]'>{userName[0]} </h1>
           <p className='text-xs font-light'>{userEmail[0]}</p>

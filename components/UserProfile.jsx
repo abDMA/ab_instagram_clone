@@ -42,7 +42,7 @@ const UserProfile = () => {
         </div>
         <div className='sm:flex hidden  justify-start mt-8 items-start gap-[5.9rem] border-b-[1px] border-b-[#EFEFEF] pb-3'>
             <div className='flex items-end justify-end mt-[-15px] flex-[0.415]'>
-                <img src={profileImg[0] ? profileImg[0] : photoUrl} alt="Photo profile" className='w-[150px] h-[150px] object-cover rounded-full '/>
+                <img src={profileImg[0] ? profileImg[0] : photoUrl} alt="Photo profile" className='w-[177px] h-[150px] object-contain rounded-full '/>
             </div>
             <div className='flex flex-[0.45] justify-end flex-col gap-3'> 
             <div className='flex items-center gap-6'>
