@@ -240,7 +240,7 @@ const EditProfile = ({props}) => {
      <div className='flex sm:items-start  items-center sm:gap-7 gap-3  py-2 '>
         <p className='pl-1 font-semibold text-center text-[14px] '>Description</p>
         <div className='sm:w-[24.5rem] w-[8.5rem]'>
-            <textarea value={description} onChange={(e)=>setDescription(e.target.value)} rows="4" cols="4" maxLength ={225} className='w-full px-2 py-1 border   outline-none resize-none text-[13px] text-[#0000008c] focus:border-black rounded-sm '>
+            <textarea value={description} onChange={(e)=>setDescription(e.target.value)} rows="4" cols="4" maxLength ={225} className='w-full px-2 py-1 border   outline-none resize-none text-[13px] text-gray-400 focus:border-black rounded-sm '>
              </textarea>
              <div className='mt-6 ml-[2px]'>
              <h4 className='text-[#8E8E8E] font-semibold text-[14px] mt-3 sm:inline-block hidden'>
