@@ -169,7 +169,7 @@ const  NavBar = ( {}) => {
               {selectedFile ? <img src={selectedFile} alt="post" className='w-full h-full object-contain' /> : <img src="upload.png" alt="upload" className='w-[50px] h-[50px]'/>}
                 </div>
                 </button>
-                <input value={caption} type="text" onChange={(e)=>{setCaption(e.target.value)}} placeholder='Put your post caption here' className='outline-none px-4 py-4 text-black  border border-gray-400 focus:ring-1 w-full h-6 placeholder:text-sm placeholder:text-gray-400' />
+                <input value={caption} type="text" onChange={(e)=>{setCaption(e.target.value)}} placeholder='Put your post caption here' className='outline-none px-4 py-4 text-gray-400  border border-gray-400 focus:ring-1 w-full h-6 placeholder:text-sm placeholder:text-gray-400' />
                 <button type='submit' disabled={!selectedFile} onClick={uploadInfo} className='flex items-center justify-center gap-3 disabled:cursor-not-allowed disabled:bg-gray-200 w-[80px] h-7 py-1text-white text-sm text-white bg-sky-400 rounded-md mt-3'>
                 <p>Post</p>
                 { loading && <svg aria-hidden="true" class="inline w-4 h-4 mr-2 text-gray-200 animate-spin  dark:text-gray-600 fill-blue-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
