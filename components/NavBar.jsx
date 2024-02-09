@@ -105,7 +105,7 @@ const  NavBar = ( {}) => {
     
     <div className="flex relative items-center justify-between md:max-w-5xl max-w-2xl mx-auto  bg-white py-2px-3 outline-none" >
       {
-        dropmenu &&  <div className=' flex md:hidden flex-col items-center px-4 absolute top-14 right-[10px] z-[60px] w-[300px] rounded-xl drop-shadow-2xl h-[400px] py-3  bg-white'> 
+        dropmenu &&  <div className=' flex md:hidden flex-col items-center px-4 absolute top-14 right-[10px] z-[60px] w-[300px] rounded-xl drop-shadow-2xl h-auto py-3  bg-white'> 
         <div className='flex items-start gap-4'>
         <div className='flex flex-col items-center hover:scale-105 ease-out duration-150'>
           <AiOutlineHome className='text-[40px]'/>
